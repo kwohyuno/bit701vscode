@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&family=Lobster&family=Nanum+Pen+Script&family=Single+Day&display=swap" rel="stylesheet">
+    <style>
+        body *{
+        font-size: 1.2rem;
+        font-family: 'Single Day';
+    }
+
+    </style>
+</head>
+<body>
+    <div style="margin: 50px;">
+        이름
+        <input type="text" id="su1" style="width: 100px;">
+        <br>
+        자바
+        <input type="text" id="su2" style="width: 100px;">
+        <br>
+        HTML
+        <input type="text" id="su3" style="width: 100px;">
+
+        <div class="buttons">
+            <button type="button" id="btn1">결과확인</button>
+        </div>
+
+        <div id="al"></div>
+        <div id="bl"></div>
+        <div id="cl"></div>
+        <div id="dl"></div>
+        <div id="el"></div>
+
+    </div>
+
+    <script>
+        var n1=document.getElementById("su1");
+        var j1=document.getElementById("su2");
+        var h1=document.getElementById("su3");
+ 
+
+    
+
+    document.getElementById("btn1").onclick=function(){
+   
+        document.getElementById("al").innerHTML=`${n1.value}`;
+        document.getElementById("bl").innerHTML=`${j1.value}`;
+        document.getElementById("cl").innerHTML=`${h1.value}`;
+        document.getElementById("dl").innerHTML=`${Number(j1.value)+Number(h1.value)}`;
+        document.getElementById("el").innerHTML=`${(Number(j1.value)+Number(h1.value))/2}`;
+
+
+    }
+
+    su1.onblur=function(){
+    if(isNaN(this.value)) 
+    {
+        alert("숫자로만 입력해주세요");
+        this.value="";
+        this.focus();
+    }
+    }    
+
+    su2.onblur=function(){
+        //숫자가 아닐경우 조건문 
+        if(isNaN(this.value)) 
+        {
+            alert("숫자로만 입력해주세요");
+            this.value="";
+            this.focus();
+        }
+    }
+
+    su1.onblur=function(){
+    if( (this.value)>100 || (this.value)<0 ) 
+    {
+        alert("0~100 사이의 숫자로 적어주세요");
+        this.value="";
+        this.focus();
+    }
+    }   
+
+    su2.onblur=function(){
+    if( (this.value)>100 || (this.value)<0 ) 
+    {
+        alert("0~100 사이의 숫자로 적어주세요");
+        this.value="";
+        this.focus();
+    }
+    }   
+    </script>
+      
+        
+</body>
+</html>

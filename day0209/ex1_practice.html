@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .photo{
+            width:100px;
+            height:100px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h2>new Array로 선언 후 배열에 값 넣어 출력하기</h2>
+    <script>
+    
+    var arr1=new Array();
+    arr1[0]="red";
+    arr1[1]="green";
+    arr1[2]="magenta";
+    arr1[3]="black";
+    arr1[4]="orange";
+    
+    for(i=0;i<arr1.length;i++){
+        document.write("<b style='color:"+arr1[i]+"'>"+arr1[i]+"</b><br>");
+        
+    }
+    </script>
+
+
+    <h2>new Array()로 선언 후 push,pop을 이용하여 데이타 추가/삭제하기</h2>
+    <script>
+
+    var arr2=new Array();
+
+    for(t=1;t<6;t++){
+    arr2[t]=`<img src="../image/food/${t}.jpg" class="photo">`;
+    }    
+
+    arr2.pop();
+
+    for(i=1;i<6;i++){
+    document.write(arr2[i]+"<br>");    
+    }
+
+ 
+    
+    
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn1{
+            width:200px;
+        }
+
+        #btn2{
+            width:200px;
+        }
+
+        .enlarge{
+            width: 10px;
+        }
+
+        .compress{
+            width: 10px;
+        }
+
+        #photo1{
+            width: 300px;
+        }
+
+    </style>
+</head>
+<body>
+    <img src="../image/moviestar/19.jpg" id="photo1">
+
+    <div class="buttons">
+        <button type="button" id="btn1">점점크게</button>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="btn2">점점작게</button>
+    </div>
+
+    <script>
+            var t=document.getElementById("photo1");
+            var l=document.getElementById("btn1");
+            var s=document.getElementById("btn2");
+            var r=photo1.width+Number(10);
+            var n=photo1.width-Number(10);
+
+            document.getElementById("btn1").onclick=function(){
+            t.setAttribute("width",r);
+            }
+
+            document.getElementById("btn2").onclick=function(){
+            t.setAttribute("width",n);
+            }
+
+
+    </script>
+
+</body>
+</html>

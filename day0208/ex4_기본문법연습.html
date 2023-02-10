@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>자바스크립트 연산자</h3>
+    <h4 style="background-color:orange">산술연산자 연습(+,-,*,/,%)</h4>
+    <script>
+        var su1=7;
+        var su2=4;
+        document.write("두수 더하기:"+(su1+su2)+"<br>");
+        document.write("두수 빼기:"+(su1-su2)+"<br>");
+        document.write("두수 곱하기:"+(su1*su2)+"<br>");
+        document.write("두수 나하기:"+(su1/su2)+"<br>");
+        document.write("두수 나머지:"+(su1%su2)+"<br>");
+    </script>
+    <h4 style="background-color: pink">증감연산자(++,--)</h4>
+    <script>
+        var a=3,b=3,m,n;
+        a++; //a값 1 증가, 단항일 경우 ++a, a++ 모두 같은 의미 
+        ++b;
+        document.write("a="+a+",b="+b+"<br>"); //4, 4
+
+        m=a++;//m=a; a++; 이 두줄과 같다. 즉 먼저 대입 후 a값이 증가된다. 
+        document.write(`m=${m}, a=${a}<br>`);//4,5
+
+        n=++b; //b++, n=b  b값이 먼저 증가된 후 n으로 대입된다
+        document.write(`n=${n}, b=${b}<br>`); //5,5
+    </script>
+    <h4 style="background-color: green;">대입연산자(=,+=,-=,*=,/=,%=)</h4>
+    <script>
+        var a=3;
+        a+=2; //a=a+2
+        document.write(a+"<br>");//5
+        a-=3; //a=a-3
+        document.write(a+"<br>");//2
+        a*=5;
+        document.write(a+"<br>");//10
+        a/=4;
+        document.write(a+"<br>");//2.5
+        a%=2;
+        document.write(a+"<br>");//0.5
+    </script>
+</body>
+</html>
+
+
+
+
+

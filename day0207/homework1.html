@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&family=Lobster&family=Nanum+Pen+Script&family=Single+Day&display=swap" rel="stylesheet">
+    <style>
+        body *{
+        font-size: 1.2rem;
+        font-family: 'Single Day';
+    }
+
+    </style>
+</head>
+<body>
+    <div style="margin: 50px;">
+        이름
+        <input type="text" id="su1" style="width: 100px;">
+        <br>
+        자바
+        <input type="text" id="su2" style="width: 100px;">
+        <br>
+        HTML
+        <input type="text" id="su3" style="width: 100px;">
+
+        <div class="buttons">
+            <button type="button" id="btn1">결과확인</button>
+        </div>
+
+        <h2 id="msg"></h2>
+
+    </div>
+
+    <script>
+        var v1=document.getElementById("su1");
+        var v2=document.getElementById("su2");
+        var v3=document.getElementById("su3");
+        var v4=document.getElementById("msg");
+
+        var r1=v1.value;
+        var r2=v2.value;
+        var r3=v3.value;
+        var r4=Number(r2.value)+Number(r3.value);
+        var r5=((Number(r2.value)+Number(r3.value))/2);
+
+    
+
+    document.getElementById("btn1").onclick=function(){
+        document.getElementById("msg").innerText=`{$r1}
+        {$r2}
+        {$r3}
+        {$r4}
+        {$r5}`
+    }
+
+    su1.onblur=function(){
+    if(isNaN(this.value)) 
+    {
+        alert("숫자로만 입력해주세요");
+        this.value="";
+        this.focus();
+    }
+    }    
+
+    su2.onblur=function(){
+        //숫자가 아닐경우 조건문 
+        if(isNaN(this.value)) 
+        {
+            alert("숫자로만 입력해주세요");
+            this.value="";
+            this.focus();
+        }
+    }
+
+    su1.onblur=function(){
+    if( (this.value)>100 || (this.value)<0 ) 
+    {
+        alert("0~100 사이의 숫자로 적어주세요");
+        this.value="";
+        this.focus();
+    }
+    }   
+
+    su2.onblur=function(){
+    if( (this.value)>100 || (this.value)<0 ) 
+    {
+        alert("0~100 사이의 숫자로 적어주세요");
+        this.value="";
+        this.focus();
+    }
+    }   
+    </script>
+      
+        
+</body>
+</html>
